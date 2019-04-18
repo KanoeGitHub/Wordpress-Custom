@@ -12,8 +12,9 @@ if (!is_amp()) {
 ?>
 
 <!--投稿者一覧を表示-->
-<img src="https://threeoctavespersecond.com/wp-content/uploads/2019/04/3OpS_logo300px.png" height="200" >
-<p></p>
+<div class="member">
+Member
+</div>
 <?php $users =get_users( array('orderby'=>ID,'order'=>ASC) );
 echo '<aside id="author_box-5" class="widget widget-content-top widget_author_box">';
 
@@ -40,6 +41,12 @@ foreach($users as $user):
 						endif;
 						if($user->youtube_url != ""):
 						echo'<a href="'.$user->youtube_url.'" class="follow-button youtube-button youtube-follow-button-sq" target="_blank" title="youtubeをフォロー" rel="nofollow noopener noreferrer"><span class="icon-youtube-logo"></span></a>';
+						endif;
+						if($user->niconico_url != ""):
+						echo'<a href="'.$user->niconico_url.'" class="follow-button niconico-button niconico-follow-button-sq" target="_blank" title="niconicoをフォロー" rel="nofollow noopener noreferrer"><span class="niconico-icon"></span></a>';
+						endif;
+						if($user->soundcloud_url != ""):
+						echo'<a href="'.$user->soundcloud_url.'" class="follow-button soundcloud-button soundcloud-follow-button-sq" target="_blank" title="soundcloudをフォロー" rel="nofollow noopener noreferrer"><span class="fab fa-soundcloud"></span></a>';
 						endif;
 						if($user->github_url != ""):
 						echo'<a href="'.$user->github_url.'" class="follow-button github-button github-follow-button-sq" target="_blank" title="githubをフォロー" rel="nofollow noopener noreferrer"><span class="icon-github-logo"></span></a>';
