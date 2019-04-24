@@ -48,6 +48,9 @@ foreach($users as $user):
 						if($user->soundcloud_url != ""):
 						echo'<a href="'.$user->soundcloud_url.'" class="follow-button soundcloud-button soundcloud-follow-button-sq" target="_blank" title="soundcloudをフォロー" rel="nofollow noopener noreferrer"><span class="fab fa-soundcloud"></span></a>';
 						endif;
+						if($user->piapro_url != ""):
+						echo'<a href="'.$user->piapro_url.'" class="follow-button piapro-button piapro-follow-button-sq" target="_blank" title="piaproをフォロー" rel="nofollow noopener noreferrer"><span class="piapro-icon"></span></a>';
+						endif;
 						if($user->github_url != ""):
 						echo'<a href="'.$user->github_url.'" class="follow-button github-button github-follow-button-sq" target="_blank" title="githubをフォロー" rel="nofollow noopener noreferrer"><span class="icon-github-logo"></span></a>';
 						endif;
