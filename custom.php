@@ -33,6 +33,9 @@ foreach($users as $user):
         		echo '<div class="sns-follow bc-brand-color fbc-hide">';
             		echo '<div class="sns-follow-message">'.$user->display_name.'をフォローする</div>';
 	    			echo '<div class="sns-follow-buttons sns-buttons">';
+/*
+アイコン等表示させるための分岐です。カスタムアイコンを表示したい場合はここのif文をカスタマイズします。
+*/
 						if($user->user_url != ""):
 						echo'<a href="'.$user->user_url.'" class="follow-button website-button website-follow-button-sq" target="_blank" title="著者サイト" rel="nofollow noopener noreferrer"><span class="icon-home-logo"></span></a>';
 						endif;
@@ -42,18 +45,7 @@ foreach($users as $user):
 						if($user->youtube_url != ""):
 						echo'<a href="'.$user->youtube_url.'" class="follow-button youtube-button youtube-follow-button-sq" target="_blank" title="youtubeをフォロー" rel="nofollow noopener noreferrer"><span class="icon-youtube-logo"></span></a>';
 						endif;
-						if($user->niconico_url != ""):
-						echo'<a href="'.$user->niconico_url.'" class="follow-button niconico-button niconico-follow-button-sq" target="_blank" title="niconicoをフォロー" rel="nofollow noopener noreferrer"><span class="niconico-icon"></span></a>';
-						endif;
-						if($user->soundcloud_url != ""):
-						echo'<a href="'.$user->soundcloud_url.'" class="follow-button soundcloud-button soundcloud-follow-button-sq" target="_blank" title="soundcloudをフォロー" rel="nofollow noopener noreferrer"><span class="fab fa-soundcloud"></span></a>';
-						endif;
-						if($user->piapro_url != ""):
-						echo'<a href="'.$user->piapro_url.'" class="follow-button piapro-button piapro-follow-button-sq" target="_blank" title="piaproをフォロー" rel="nofollow noopener noreferrer"><span class="piapro-icon"></span></a>';
-						endif;
-						if($user->github_url != ""):
-						echo'<a href="'.$user->github_url.'" class="follow-button github-button github-follow-button-sq" target="_blank" title="githubをフォロー" rel="nofollow noopener noreferrer"><span class="icon-github-logo"></span></a>';
-						endif;
+
 					echo '</div>';
 				echo '</div>';
 			echo '</div>';
